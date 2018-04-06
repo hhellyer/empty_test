@@ -82,7 +82,7 @@ function runInstaller(fileName, cb) {
   const shell = win ? 'powershell.exe' : 'bash';
 
   const filePath = path.resolve(__dirname, fileName);
-  console.log(`Now running: ${shell} ${filePath}`);
+  console.log(`Now running : ${shell} ${filePath}`);
 
   cp.spawnSync(shell, [filePath], {stdio: 'inherit'});
   typeof cb === 'function' && cb();
